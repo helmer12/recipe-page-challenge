@@ -19,30 +19,6 @@
     box-sizing: border-box;
 }
 
-@media (min-width: 600px) {
-    body {
-        padding: 0;
-    }
-
-    .recipe-card {
-        padding: 2.5rem;
-        border-radius: var(--space-200);
-    }
-
-    .recipe-card img {
-        border-radius: 0;
-        margin-bottom: var(--space-200);
-    }
-
-    main {
-        padding: 0;
-    }
-
-    article {
-        padding: var(--space-200);
-    }
-}
-
 
 body {
     font-family: var(--font-body);
@@ -54,10 +30,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    padding: 2.5rem 0;
-}
-
-p {
+    padding: 0;
     line-height: 1.6;
 }
 
@@ -68,14 +41,29 @@ section {
 .recipe-card {
     background-color: var(--white);
     max-width: 736px;
-    padding: 2.5rem;
-    border-radius: var(--space-200);
+    padding: 0;
+    border-radius: 0;
 }
 
 .recipe-card img{
     width: 100%;
-    border-radius: 0.75rem;
-    margin-bottom: 2.5rem;
+    border-radius: 0;
+    margin-bottom: var(--space-200);
+}
+
+@media (min-width: 600px) {
+    body {
+        padding: var(--space-300) 0;
+    }
+
+    .recipe-card {
+        padding: var(--space-300);
+        border-radius: var(--space-200);
+    }
+
+    .recipe-card img {
+       border-radius: var(--space-100);
+    }
 }
 
 h1 {
@@ -91,7 +79,7 @@ h2 {
 
 .prep-time {
     background-color: var(--rose-50);
-    padding: 25px;
+    padding: var(--space-200);
     border-radius: 0.75rem;
     margin: var(--space-300) 0;
 }
@@ -103,12 +91,12 @@ h2 {
 }
 
 ul, ol {
-    padding-left: 24px;
+    padding-left: var(--space-200);
 }
 
 li {
-    margin-bottom: 10px;
-    padding-left: 10px;
+    margin-bottom: var(--space-100);
+    padding-left: 0.625rem;
 }
 
 ol li::marker {
@@ -129,11 +117,14 @@ table {
     border-collapse: collapse;
 }
 
+th,
 td {
-    padding: 0.75rem var(--space-200);
+    padding: var(--space-100) var(--space-200);
     border-bottom: 1px solid var(--stone-100);
+    text-align: left;
 }
 
+tr:last-child th,
 tr:last-child td {
     border-bottom: none;
 }
@@ -150,7 +141,7 @@ hr {
     margin: var(--space-300) 0;
 }
 .attribution {
-    font-size: 0.75rem;
+    font-size: var(--space-100);
     text-align: center;
     margin-top: var(--space-300);
     color: var(--stone-600);
